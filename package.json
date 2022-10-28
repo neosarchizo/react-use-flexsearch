@@ -28,8 +28,7 @@
   "author": "Angelo Ashmore",
   "license": "MIT",
   "dependencies": {
-    "flexsearch": "^0.7.31",
-    "flexsearch-ts": "^0.7.31"
+    "flexsearch": "^0.7.31"
   },
   "devDependencies": {
     "@babel/core": "^7.3.3",
