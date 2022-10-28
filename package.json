@@ -1,6 +1,6 @@
 {
   "name": "react-use-flexsearch",
-  "version": "0.3.1",
+  "version": "0.2.0",
   "description": "React hook to search a FlexSearch index",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -12,7 +12,8 @@
     "prepublish": "npm run build",
     "release": "standard-version",
     "test": "jest",
-    "test:watch": "npm run test -- --watch"
+    "test:watch": "npm run test -- --watch",
+    "prepare": "yarn build"
   },
   "homepage": "https://github.com/angeloashmore/react-use-flexsearch",
   "repository": {
