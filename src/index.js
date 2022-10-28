@@ -25,13 +25,19 @@ export const useFlexSearch = (query, providedIndex, store, searchOptions) => {
       return
     }
 
-    if (providedIndex instanceof FlexSearch) {
+    if (providedIndex instanceof FlexSearch.Index) {
       setIndex(providedIndex)
       return
     }
 
-    const importedIndex = FlexSearch.create()
-    importedIndex.import(providedIndex)
+    const importedIndex = new FlexSearch.Index({ tokenize: 'strict' })
+
+    const obj = JSON.parse(providedIndex)
+
+    importedIndex.import('reg', obj.reg)
+    importedIndex.import('cfg', obj.cfg)
+    importedIndex.import('map', obj.map)
+    importedIndex.import('ctx', obj.ctx)
 
     setIndex(importedIndex)
   }, [providedIndex])
